@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pricing</title>
-    <script 
-      src="https://js.mystackpay.com/pricing-list.js" 
-      token="698d5f72-9355-48ab-aef1-7d2775f9e810">
+    <title>AYSO Davis Pricing</title>
+    <script>
+      window.onload = function () {
+        const script = document.createElement('script');
+        script.src = "https://js.mystackpay.com/pricing-list.js";
+        script.setAttribute("token", "698d5f72-9355-48ab-aef1-7d2775f9e810");
+        document.body.appendChild(script);
+      };
     </script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
