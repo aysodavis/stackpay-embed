@@ -8,6 +8,16 @@
         script.src = "https://js.mystackpay.com/pricing-list.js";
         script.setAttribute("token", "698d5f72-9355-48ab-aef1-7d2775f9e810");
         document.body.appendChild(script);
+
+        // Try to remove the "One Time" button after script loads
+        setTimeout(() => {
+          const buttons = document.querySelectorAll("button");
+          buttons.forEach((btn) => {
+            if (btn.innerText.toLowerCase().includes("one time")) {
+              btn.style.display = "none";
+            }
+          });
+        }, 1000); // delay to allow script to load
       };
     </script>
     <style>
